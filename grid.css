@@ -1,0 +1,110 @@
+/*------------------------------*\
+    Grid System: 12 col system
+\*------------------------------*/
+
+.row, 
+.column {
+    box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.column {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.column + .column {
+    margin-left: 1.6%;
+}
+
+.column-1 {
+    width: 23.8%;
+}
+
+.column-2 {
+    width: 49.2%;
+}
+
+.column-3 {
+    width: 74.6%;
+}
+
+.column-4 {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .column-1, 
+    .column-2, 
+    .column-3, 
+    .column-4 {
+        float: none;
+        width: auto;
+    }
+  
+    .column + .column {
+        margin-left: 0;
+    }
+}
+
+/*------------------------------*\
+    Styling
+\*------------------------------*/
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: #333;
+}
+
+.column {
+    background: #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    min-height: 500px;
+    text-align: center;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.p {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+@media only screen and (max-width: 1400px) {
+    
+    .row {
+        margin-bottom: 0;
+    }
+    .column {
+        margin-bottom: 10px;
+    }
+    .row:last-child .column:last-child {
+        margin-bottom: 0;
+    }
+}
